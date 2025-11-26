@@ -1,0 +1,234 @@
+{
+  "uuid": "78ab8ce8-c9b3-4270-bfe0-c4ff79f65032",
+  "lastMigration": 33,
+  "name": "HotelApp Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "dc34e8a5-812e-4f95-a7bb-a5b5431852a0",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "80790bd0-5877-46ca-9ae6-e0f9f5b97e3b",
+          "body": " \n  \n  [\n    {\n        \"id\": 101,\n        \"checkInDate\": \"2024-07-01\",\n        \"checkOutDate\": \"2024-07-05\",\n        \"guestName\": \"John Doe1\",\n        \"roomNumber\": 101\n    },\n    {\n        \"id\": 102,\n        \"checkInDate\": \"2024-07-02\",\n        \"checkOutDate\": \"2024-07-06\",\n        \"guestName\": \"Jane Doe2\",\n        \"roomNumber\": 102\n    },\n    {\n        \"id\": 103,\n        \"checkInDate\": \"2024-07-03\",\n        \"checkOutDate\": \"2024-07-07\",\n        \"guestName\": \"Joana Doe3\",\n        \"roomNumber\": 103\n    },\n     {\n        \"id\": 104,\n        \"checkInDate\": \"2024-07-03\",\n        \"checkOutDate\": \"2024-07-07\",\n        \"guestName\": \"Joana Doe4\",\n        \"roomNumber\": 104\n    }\n]\n ",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9dce0232-e3d9-4e0a-92f6-9e7fed753414",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "d6d1d360-7ef0-49be-bd84-f295b057650a",
+          "body": " \n  \n   {\n        \"id\": 1,\n        \"checkInDate\": \"2024-07-01\",\n        \"checkOutDate\": \"2024-07-05\",\n        \"guestName\": \"John Doe\",\n        \"roomNumber\": 101\n    }\n  \n ",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "faa8dee2-8718-4afb-861d-4b7ca8e3e8ce",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "f0387843-1520-4c39-b82a-45063e2cacbb",
+          "body": " ",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e286aeaa-2442-4a6d-af3c-fe55bd20a0eb",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "61ff7465-638d-4417-9e1d-48f0031fbd94",
+          "body": " \n  \n   {\n        \"id\": 1,\n        \"checkInDate\": \"2024-07-01\",\n        \"checkOutDate\": \"2024-07-05\",\n        \"guestName\": \"John Doe updated\",\n        \"roomNumber\": 101\n    }\n  \n ",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "6bb7e2aa-ce67-4798-9220-37a8c79f8dad",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "reservations/:id",
+      "responses": [
+        {
+          "uuid": "a7946b05-919d-44fc-9592-4c39734142ef",
+          "body": " \n  \n   {\n        \"id\": 500,\n        \"checkInDate\": \"2024-07-01\",\n        \"checkOutDate\": \"2024-07-05\",\n        \"guestName\": \"NEW RESERVATION NAME\",\n        \"roomNumber\": 101\n    }\n  \n ",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "dc34e8a5-812e-4f95-a7bb-a5b5431852a0"
+    },
+    {
+      "type": "route",
+      "uuid": "9dce0232-e3d9-4e0a-92f6-9e7fed753414"
+    },
+    {
+      "type": "route",
+      "uuid": "faa8dee2-8718-4afb-861d-4b7ca8e3e8ce"
+    },
+    {
+      "type": "route",
+      "uuid": "e286aeaa-2442-4a6d-af3c-fe55bd20a0eb"
+    },
+    {
+      "type": "route",
+      "uuid": "6bb7e2aa-ce67-4798-9220-37a8c79f8dad"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

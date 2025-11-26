@@ -1,0 +1,56 @@
+
+<div class="card mt-5 my-2">
+  <div class="row">
+    <div class="col"></div>
+    <h3 class="text-center">You have {{ getNumberOfBookings() }} bookings:</h3>
+  </div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Guest</th>
+      <th scope="col">From</th>
+      <th scope="col">Until</th>
+      <th scope="col">Room Number</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+
+  <tbody class="table-group-divider">
+    @for(r of reservations; track r.id) {
+    <tr>
+      <th scope="row">{{ r.id }}</th>
+      <td>{{ r.guestName }}</td>
+      <td class="my-20">{{ r.checkInDate }}</td>
+      <td>{{ r.checkOutDate }}</td>
+      <td>{{ r.roomNumber }}</td>
+      <td><button (click)="deleteReservation(r.id)" class="btn btn-danger">Delete</button></td>
+      <td><button (click)="editReservation(r.id)" class="btn btn-primary">Edit</button></td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<hr />
+
+
+
+<h3 class="text-center mt-5">You have {{ getNumberOfBookings() }} bookings:</h3>
+
+@if(getNumberOfBookings() > 0){
+<ul class="list-group mt-3">
+  @for(item of reservations; track item.id) {
+  <li class="list-group-item d-flex justify-content-between align-items-left">
+    {{ item.id }} - {{ item.guestName }} at {{ item.checkInDate }}
+
+    <button (click)="deleteReservation(item.id)" class="btn btn-danger">Delete</button>
+  </li>
+  }
+</ul>
+} @else {
+
+<h4 class="text-center mt-5">No reservations found.</h4>
+
+}
