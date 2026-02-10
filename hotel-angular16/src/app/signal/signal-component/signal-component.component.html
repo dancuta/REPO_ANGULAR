@@ -1,0 +1,32 @@
+<h2>{{ label }}</h2>
+<button (click)="toggleTheme()">Toggle Theme</button>
+
+<br />
+<br />
+<div>Price: {{ price }}</div>
+<span> Quantity: {{ quantity() }}</span> &nbsp; &nbsp; &nbsp;
+<button (click)="quantity.set(quantity() + 1)">Increase quantity by one</button>
+&nbsp; &nbsp; &nbsp;
+<button (click)="quantity.set(quantity() - 1)">Decrease quantity by one</button>
+
+<input
+  type="number"
+  value="{{ quantity() }}"
+  (change)="onChangeQuantity($event)"
+/>
+<br />
+
+<div>Total Price: {{ totalPrice() }}</div>
+
+<br />
+<br />
+
+<input type="text" placeholder="Product name" #productName (input)="changeFilterName($event)"/>
+<div>
+  <h3>Products</h3>
+  <ul>
+    <li *ngFor="let product of filteredProducts()">
+      {{ product.name }} - {{ product.price }}
+    </li>
+  </ul>
+</div>

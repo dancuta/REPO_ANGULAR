@@ -1,0 +1,52 @@
+<div class="card mt-5 my-2">
+  <div class="row">
+    <div class="col"></div>
+    <h3 class="text-center">{{ title }}</h3>
+  </div>
+</div>
+
+<form [formGroup]="reservationForm" (ngSubmit)="submitReservation()">
+  <div class="row mb-3">
+    <div class="col">
+        <label class="form-label">Check-in date* :</label>
+        <input type="date" formControlName="checkInDate" class="form-control" />         
+        <small class="text-danger" *ngIf="reservationForm.get('checkInDate')?.invalid &&
+        reservationForm.get('checkInDate')?.touched">
+            Check-in date is required!
+        </small>
+    </div>
+    
+    <div class="col">
+        <label class="form-label">Check-out date* :</label>
+        <input type="date" formControlName="checkOutDate" class="form-control" />
+        <small class="text-danger" *ngIf="reservationForm.get('checkOutDate')?.invalid &&
+        reservationForm.get('checkOutDate')?.touched">
+            Check-out date is required!
+        </small>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+        <label class="form-label">Guest name* :</label>
+        <input formControlName="guestName" class="form-control" />
+        <small class="text-danger" *ngIf="reservationForm.get('guestName')?.invalid &&
+        reservationForm.get('guestName')?.touched">
+            Guest name is required!
+        </small>
+    </div>
+
+    <div class="col">
+        <label class="form-label">Room number* :</label>
+        <input formControlName="roomNumber" class="form-control" />
+        <small class="text-danger" *ngIf="reservationForm.get('roomNumber')?.invalid &&
+        reservationForm.get('roomNumber')?.touched">
+            Room number is required!
+        </small>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-10" [disabled]="!isValid()">
+    Submit
+  </button>
+</form>

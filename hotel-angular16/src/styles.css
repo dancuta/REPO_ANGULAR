@@ -1,0 +1,9 @@
+/* Import CSS style from bootstrap*/
+@import  "bootstrap/dist/css/bootstrap.min.css";
+
+.dark   {
+    background-color: gray;
+}
+.light {
+    background-color: white;
+}
